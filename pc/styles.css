@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#scrolling-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.magnific.com/free-vector/coloured-polygonal-background-design_1164-31.jpg');
+    background-repeat: repeat;
+    background-size: 400px 400px; /* adjust tile size as you like */
+    animation: scrollBackground 5s ease-in-out infinite;
+    z-index: -5;
+}
+
+.center {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@keyframes scrollBackground {
+    0% {
+        background-position: 0 0;
+        filter: brightness(1) blur(3px);
+
+    }
+    50% {
+        filter: brightness(0.7) blur(5px);
+    }
+    100% {
+        background-position: -400px 400px;
+        filter: brightness(1) blur(3px);
+    }
+}
